@@ -26,7 +26,8 @@ import com.topsoft.topframework.swing.util.SystemColors;
 import net.miginfocom.swing.MigLayout;
 
 public class MyRootPane extends WebRootPane implements ActionListener, MouseMotionListener, MouseListener{
-	
+
+
 	LazPanel title, body;
 	LazLabel lbTitle;
 	private int dX, dY;
