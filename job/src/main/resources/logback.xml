@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+	<!-- xsi:noNamespaceSchemaLocation="logback.xsd" -->
+
+	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n
+			</pattern>
+		</encoder>
+	</appender>
+
+	<appender name="quartzAppender" class="com.topsoft.jscheduler.job.quartz.log.LazLogAppender">
+		<encoder>
+			<pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+		</encoder>
+
+		<appender-ref ref="STDOUT"></appender-ref>
+	</appender>
+
+	<root level="info">
+		<appender-ref ref="quartzAppender" />
+	</root>
+	
+</configuration>
